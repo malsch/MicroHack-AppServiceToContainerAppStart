@@ -49,12 +49,12 @@ jobs:
     - name: Deploy to Container App
       uses: azure/container-apps-deploy-action@v2
       with:
-        imageToDeploy: microhackregistry.azurecr.io/microhackapp:${{ steps.get_tag.outputs.image_tag }}
+        imageToDeploy: microhackregistrymaltes.azurecr.io/microhackapp:${{ steps.get_tag.outputs.image_tag }}
         acrUsername: ${{ secrets.ACR_USERNAME }}
         acrPassword: ${{ secrets.ACR_PASSWORD }}
         resourceGroup: MicroHack-AppServiceToContainerApp
         containerAppEnvironment: microhack-containerenvironment-maltes
         containerAppName: microhack-containerapp-maltes
-        targetPort: 80
+        targetPort: 8080
 #    - name: Test
 #      run: dotnet test --no-build --verbosity normal
