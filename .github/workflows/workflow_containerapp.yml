@@ -55,6 +55,6 @@ jobs:
         resourceGroup: MicroHack-AppServiceToContainerApp
         containerAppEnvironment: microhack-containerenvironment-maltes
         containerAppName: microhack-containerapp-maltes
-        targetPort: 8080
+        targetPort: 80
 #    - name: Test
 #      run: dotnet test --no-build --verbosity normal
